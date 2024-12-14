@@ -16,14 +16,13 @@ Last edit: 12 - 13 - 2024
 - [x] Dynamically render site and populate from my repos - 12/13
 - [X] Add a light-mode using Tailwind's light/dark-mode feature - 12/13
 - [X] Host on GitHub pages
+- [X] Add a Socials page
+- [X] Add a History page
 
 # TODO
 - [ ] Inlude a link to my resume and quick download link
 - [ ] Add more "fun" elements, tile animation maybe?
 - [ ] Add current projects page (not dynamically rendered)
-- [ ] Add a "watermark"
 - [ ] Implement a login system to add comments the right way
 - [ ] Learn how to use cookies and store user data
-- [ ] Add a Socials page
 - [ ] Add a Q&A Section
-- [ ] Add a History page
