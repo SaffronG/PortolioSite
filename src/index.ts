@@ -5,7 +5,7 @@ let reposDivNode: HTMLElement = document.getElementById('repo_placeholder')
 async function render_repos() {
     let repos_list = await get_repos()
     let repos: HTMLUListElement = document.createElement('ul')
-    repos.className = 'flex-col'
+    repos.className = 'flex-col m-2'
 
     repos_list.map((m) => {
         let ulNode: HTMLLIElement = document.createElement('li')

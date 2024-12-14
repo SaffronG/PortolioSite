@@ -1,6 +1,6 @@
 # PortolioSite
 By K. Chase Harmer
-Last edit: 12/13/, c2024nj
+Last edit: 12 - 13 - 2024
 
 <hr>
 
@@ -12,7 +12,13 @@ Last edit: 12/13/, c2024nj
 # Completed
 - [X] Setup TS pipeline - 12/13
 - [x] Include CSS Framwork (Tailwind) -12/13
+- [x] Create static landing page (Barebones) -12/13
+- [x] Dynamically render site and populate from my repos -12/13
 
 # TODO
-- [ ] Create static landing page
-- [ ] Dynamically render site and populate from my repos
+- [ ] Inlude a link to my resume and quick download link
+- [ ] Add more "fun" elements, tile animation maybe?
+- [ ] Add links to socials
+- [ ] Add current projects page (not dynamically rendered)
+- [ ] Add a "watermark"
+- [ ] Host on GitHub pages
