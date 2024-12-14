@@ -1,9 +1,31 @@
 import { get_repos } from "./service.js";
 let reposDivNode = document.getElementById('repo_placeholder');
+let leftBar = document.getElementById('left-bar');
+let projectHeader = document.getElementById('project_header');
+let viewMoreButton = document.getElementById('view_more');
+let mainDiv = document.getElementById('main_div');
 async function render_repos() {
     let repos_list = await get_repos();
     let repos = document.createElement('ul');
     repos.className = 'flex-col m-2';
+    let visible = true;
+    viewMoreButton.addEventListener("click", () => {
+        visible = visible ? false : true;
+        if (visible) {
+            mainDiv.className = "flex content-start divide-x-2 divide-slate-600";
+            viewMoreButton.className = 'text-2xl border-solid m-2 justify-end m-auto hover:text-green-400 cursor-pointer';
+            leftBar.className = "transition-all w-auto";
+            repos.className = "flex-col m-2";
+            projectHeader.className = 'text-2xl border-solid m-2 block';
+        }
+        else {
+            mainDiv.className = "flex content-start";
+            viewMoreButton.className = 'text-2xl border-solid border-green-600 m-2 justify-end m-auto hover:text-green-400 cursor-pointer';
+            leftBar.className = "transition-all";
+            repos.className = "hidden";
+            projectHeader.className = 'text-2xl border-solid m-2 hidden';
+        }
+    });
     repos_list.map((m) => {
         let ulNode = document.createElement('li');
         let linkDiv = document.createElement('div');
