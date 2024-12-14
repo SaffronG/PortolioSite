@@ -16,7 +16,7 @@ async function render_repos() {
     viewMoreButton.addEventListener("click", () => {
         visible = visible ? false : true
         if (visible) {
-            mainDiv.className = "flex content-start divide-x-2 divide-slate-600"
+            mainDiv.className = "flex content-start divide-x-2 light:divide-gray-700 dark:divide-slate-600"
             viewMoreButton.className = 'text-2xl border-solid m-2 justify-end m-auto hover:text-green-400 cursor-pointer'
             leftBar.className = "transition-all w-auto"
             repos.className = "flex-col m-2"
@@ -24,7 +24,7 @@ async function render_repos() {
         }
         else {
             mainDiv.className = "flex content-start"
-            viewMoreButton.className = 'text-2xl border-solid border-green-600 m-2 justify-end m-auto hover:text-green-400 cursor-pointer'
+            viewMoreButton.className = 'text-2xl border-solid border-green-600 m-0 justify-end hover:text-green-400 cursor-pointer'
             leftBar.className = "transition-all"
             repos.className = "hidden"
             projectHeader.className = 'text-2xl border-solid m-2 hidden'
