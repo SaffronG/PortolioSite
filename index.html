@@ -6,13 +6,19 @@
     <link rel="stylesheet" href="./src/output.css">
     <title>Portfolio</title>
 </head>
-<body class="flex justify-center bg-slate-800 text-green-600">
+<body class="flex-col p-4 justify-center bg-slate-800 text-green-600">
     <script src="./dist/index.js" type="module"></script>
-    <a class="text-3xl font-bold hover:text-green-400 transition cursor-pointer shadow-sm" href="https://github.com/SaffronG">
+    <a class="text-3xl font-bold hover:text-green-400 transition cursor-pointer shadow-sm justify-self-center" href="https://github.com/SaffronG">
         $ echo >> Homepage 
     </a>
-    <main>
-        
+    <hr class="my-2 h-px bg-gray-200 border-0 dark:bg-gray-700">
+    <main class="flex content-start">
+        <div id="left-bar" class="flex-col bg-slate-1000 border-solid border-slate-600 border-5">
+            <h3 class="text-2xl border-solid">./Repos</h3>
+                <hr class="my-2 w-20 h-px bg-gray-200 border-0 dark:bg-gray-700">
+                <p id="repo_placeholder">Loading...</p>
+                <!-- Render all Repos Here -->
+        </div>
     </main>
 </body>
 </html>
