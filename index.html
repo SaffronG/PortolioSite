@@ -6,15 +6,25 @@
     <link rel="stylesheet" href="./src/output.css">
     <title>Portfolio</title>
 </head>
+<script src="./dist/index.js" type="module"></script>
 <body class="flex-col p-4 justify-center bg-slate-800 text-green-600">
-    <script src="./dist/index.js" type="module"></script>
-    <a class="text-3xl font-bold hover:text-green-400 transition cursor-pointer shadow-sm justify-self-center" href="https://github.com/SaffronG">
-        $ echo >> Homepage 
-    </a>
+    <div class="flex space-between text-center">
+        <a href="https://github.com/SaffronG"><img class="border-solid border-4 border-green-400 size-20 rounded-full hover:brightness-150 transition-all duration-500" src="/assets/Programming Logo.png" alt="SaffronG's Programming Logo"></a>
+        <div class="flex justify-center align-center">
+            <a class="text-3xl m-4 font-bold hover:text-green-400 transition cursor-pointer shadow-sm justify-self-center" href="./index.html">$ cd ./Homepage</a>
+            <a class="text-3xl m-4 font-bold hover:text-green-400 transition cursor-pointer shadow-sm justify-self-center" href="./index.html">$ cd ./History</a>
+            <a class="text-3xl m-4 font-bold hover:text-green-400 transition cursor-pointer shadow-sm justify-self-center" href="./index.html">$ cd ./Social</a>
+            <a class="text-3xl m-4 font-bold hover:text-green-400 transition cursor-pointer shadow-sm justify-self-center" href="./index.html">$ cd ./Projects</a>
+            <a class="text-3xl m-4 font-bold hover:text-green-400 transition cursor-pointer shadow-sm justify-self-center" href="./index.html">$ ls </a>
+        </div>
+    </div>
     <hr class="my-2 h-px bg-gray-200 border-0 dark:bg-gray-700">
     <main class="flex content-start divide-x-2 divide-slate-600">
         <div id="left-bar" class="flex-col bg-slate-1000 border-solid border-slate-600 border-5 divide-y-2 divide-slate-600">
-            <h3 class="text-2xl border-solid m-2">./Repos</h3>
+            <div class="flex">
+                <h3 class="text-2xl border-solid m-2">Projects</h3>
+                <a class="text-2xl border-solid m-2 justify-end m-auto hover:text-green-400 cursor-pointer"> <<</a>
+            </div>
             <p id="repo_placeholder">Loading...</p>
                 <!-- Render all Repos Here -->
         </div>
