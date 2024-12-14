@@ -1,11 +1,25 @@
 import { get_repos } from "./service.js";
 
 let reposDivNode: HTMLElement = document.getElementById('repo_placeholder')
+let leftBar: HTMLElement = document.getElementById('left-bar')
+let viewMoreButton: HTMLElement = document.getElementById('view_more')
 
 async function render_repos() {
     let repos_list = await get_repos()
     let repos: HTMLUListElement = document.createElement('ul')
     repos.className = 'flex-col m-2'
+
+    let visible: Boolean = true;
+
+    viewMoreButton.addEventListener("click", () => {
+        visible = visible ? false : true
+        if (visible) {
+            leftBar.className = "transition-all w-auto"
+        }
+        else {
+            leftBar.className = "transition-all w-0"
+        }
+    })
 
     repos_list.map((m) => {
         let ulNode: HTMLLIElement = document.createElement('li')
