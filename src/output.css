@@ -24,6 +24,9 @@
 .my-2 {
   margin-block: calc(var(--spacing) * 2);
 }
+.mr-5 {
+  margin-right: calc(var(--spacing) * 5);
+}
 .block {
   display: block;
 }
@@ -57,11 +60,29 @@
 .h-px {
   height: 1px;
 }
+.w-96 {
+  width: calc(var(--spacing) * 96);
+}
+.w-100 {
+  width: calc(var(--spacing) * 100);
+}
 .w-auto {
   width: auto;
 }
 .w-full {
   width: 100%;
+}
+.w-lg {
+  width: var(--container-lg);
+}
+.w-md {
+  width: var(--container-md);
+}
+.w-xl {
+  width: var(--container-xl);
+}
+.w-xs {
+  width: var(--container-xs);
 }
 .border-collapse {
   border-collapse: collapse;
@@ -75,9 +96,6 @@
 .flex-col {
   flex-direction: column;
 }
-.content-evenly {
-  align-content: space-evenly;
-}
 .content-start {
   align-content: flex-start;
 }
@@ -87,8 +105,8 @@
 .justify-end {
   justify-content: flex-end;
 }
-.justify-evenly {
-  justify-content: space-evenly;
+.justify-items-center {
+  justify-items: center;
 }
 .space-x-3 {
   :where(& > :not(:last-child)) {
@@ -191,10 +209,6 @@
   font-size: var(--text-3xl);
   line-height: var(--tw-leading, var(--text-3xl--line-height));
 }
-.text-lg {
-  font-size: var(--text-lg);
-  line-height: var(--tw-leading, var(--text-lg--line-height));
-}
 .text-xl {
   font-size: var(--text-xl);
   line-height: var(--tw-leading, var(--text-xl--line-height));
@@ -208,9 +222,6 @@
 }
 .underline {
   text-decoration-line: underline;
-}
-.decoration-wavy {
-  text-decoration-style: wavy;
 }
 .outline {
   outline-style: var(--tw-outline-style);
@@ -235,20 +246,6 @@
 .duration-500 {
   --tw-duration: 500ms;
   transition-duration: 500ms;
-}
-.hover\:m-6 {
-  &:hover {
-    @media (hover: hover) {
-      margin: calc(var(--spacing) * 6);
-    }
-  }
-}
-.hover\:m-7 {
-  &:hover {
-    @media (hover: hover) {
-      margin: calc(var(--spacing) * 7);
-    }
-  }
 }
 .hover\:fill-black {
   &:hover {
@@ -297,14 +294,6 @@
     @media (hover: hover) {
       font-size: var(--text-4xl);
       line-height: var(--tw-leading, var(--text-4xl--line-height));
-    }
-  }
-}
-.hover\:text-5xl {
-  &:hover {
-    @media (hover: hover) {
-      font-size: var(--text-5xl);
-      line-height: var(--tw-leading, var(--text-5xl--line-height));
     }
   }
 }
@@ -377,6 +366,10 @@
     --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-black: #000;
     --spacing: 0.25rem;
+    --container-xs: 20rem;
+    --container-md: 28rem;
+    --container-lg: 32rem;
+    --container-xl: 36rem;
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
