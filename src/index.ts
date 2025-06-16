@@ -5,6 +5,9 @@ let leftBar: HTMLElement = document.getElementById('left-bar')
 let projectHeader: HTMLElement = document.getElementById('project_header')
 let viewMoreButton: HTMLElement = document.getElementById('view_more')
 let mainDiv: HTMLElement = document.getElementById('main_div')
+// WINDOW WIDTH AND HEIGHT
+const vw = window.innerWidth
+const vh = window.innerHeight
 
 async function render_repos() {
     let repos_list = await get_repos()
